@@ -19,13 +19,16 @@ export default function SearchKeyword({$app, searchData}){
     }
 
     function initEvent(){
+        let timer
         $target.addEventListener('keyup', function(e) {
-            if(e.target.value){
-                logData()
+            if(timer) {
+                clearTimeout(timer)    
             }
+            timer = setTimeout(function(){
+                logData()
+            }, 300)
         })
     }
 
     initEvent()
-  
 }
