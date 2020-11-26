@@ -14,9 +14,9 @@ export default function SearchResult({$app, data}){
 
     this.render = () => {
         if(this.data){
-            const htmlString = `${this.data
+            const htmlString = this.data
                 .map(d => `<img src="${d.imageUrl}">`)
-                .join('')}`
+                .join('')
             $target.innerHTML = htmlString
         }
     }

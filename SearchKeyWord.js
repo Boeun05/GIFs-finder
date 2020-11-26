@@ -8,9 +8,9 @@ export default function SearchKeyword({$app, searchData}){
     
     function fetchData() {
         const url = `https://jjalbot.com/api/jjals?text=${$target.value}`
-        return fetch(url).then(function(response) {
-          return response.json();
-        });
+        return fetch(url).then((response) =>
+           response.json()
+        )
     }
     
     async function logData() {
