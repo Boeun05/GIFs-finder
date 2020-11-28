@@ -10,15 +10,25 @@ export default function App({$app}){
             (component) => {component.setState && component.setState(this.data)}
         )
     }
-    
     this.components = [
-        new SearchKeyword({
+        new SearchKeyword ({
             $app,
-            searchData: this.setState
+            searchData: (data) => {
+                this.setState(data)
+            }
         }),
         new SearchResult({
             $app,
             data:this.data
         })
     ]
+    
+    
+    
+
+    
+
+
+
+
 }

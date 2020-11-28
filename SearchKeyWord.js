@@ -31,4 +31,6 @@ export default function SearchKeyword({$app, searchData}){
     }
 
     initEvent()
+
+
 }
